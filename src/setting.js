@@ -34,7 +34,7 @@ let defaults = {
   'app.always_show_result': false,
   'app.enable_hardware_acceleration': true,
   'app.hide_busy_delay': 200,
-  'app.lang': 'en',
+  'app.lang': 'ko',
   'app.loadgame_delay': 100,
   // frank_go: default off (checks upstream Sabaki releases)
   'app.startup_check_updates': false,

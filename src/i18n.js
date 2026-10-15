@@ -57,7 +57,10 @@ exports.formatWeekdayShort = function (weekday) {
   return date.toLocaleString(appLang, {weekday: 'short'})
 }
 
+let currentStrings = {}
+
 function loadStrings(strings) {
+  currentStrings = strings
   dolm.load(strings)
 
   if (isElectron && !isRenderer && ipcMain) {
@@ -88,6 +91,18 @@ exports.loadLang = function (lang) {
   appLang = lang
 
   exports.loadFile(languages[lang].filename)
+
+  // frank_go: frank 전용 한국어 문자열 병합 (@sabaki/i18n에 없음)
+  if (lang === 'ko') {
+    try {
+      let frankKo = require('./frank/i18n-ko')
+      let merged = Object.assign({}, currentStrings)
+      for (let ctx of Object.keys(frankKo)) {
+        merged[ctx] = Object.assign({}, merged[ctx], frankKo[ctx])
+      }
+      loadStrings(merged)
+    } catch (e) {}
+  }
 }
 
 exports.getLanguages = function () {

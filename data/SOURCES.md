@@ -17,6 +17,7 @@ solutions**, partly for copyright reasons.
 | `gokyoshumyo.sgf`  | Gokyo Shumyo (Hayashi Genbi, 1812)                     | 520      | public domain (classical)                |
 | `xxqj.sgf`         | Xuanxuan Qijing (Yan Defu & Yan Tianzhang, ~1347)      | 347      | public domain (classical)                |
 | `hatsuyoron.sgf`   | Igo Hatsuyō-ron (Inoue Dōsetsu Inseki, ~1713)          | 183      | public domain (classical)                |
+| `guanzipu.sgf`     | Guanzi Pu — Endgame Classics (Guo Bailing, Qing dyn.) | 1475     | public domain (classical)                |
 | `cho-1.sgf`        | Cho Chikun's Encyclopedia of Life & Death — Elementary | 900      | positions only; modern work — see caveat |
 | `cho-2.sgf`        | …— Intermediate                                        | 861      | idem                                     |
 | `cho-3.sgf`        | …— Advanced                                            | 792      | idem                                     |

@@ -83,6 +83,16 @@ const COLLECTIONS = [
     levelRange: [9, 10],
     category: () => 'classic',
   },
+  {
+    id: 'guanzipu',
+    file: 'guanzipu.sgf',
+    title: 'Guanzi Pu — Endgame Classics (Qing dynasty)',
+    levelRange: [4, 7],
+    category: () => 'endgame',
+    credit:
+      'Guanzi Pu by Guo Bailing (Qing dynasty), public domain · ' +
+      'SGF via benjaminmantle/baduk-study-material',
+  },
 ]
 
 // GoGameGuru weekly problems: commented, with full solution trees.
@@ -254,7 +264,7 @@ let problems = []
 
 for (let config of COLLECTIONS) {
   let built = buildCollection(config)
-  built.meta.credit = TASUKI_CREDIT
+  built.meta.credit = config.credit || TASUKI_CREDIT
   collections[config.id] = built.meta
   problems.push(...built.problems)
   console.log(`${config.id}: ${built.problems.length} problems`)
